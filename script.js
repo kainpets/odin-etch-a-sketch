@@ -12,14 +12,8 @@ const createSquares = numOfSquares => {
     let div = document.createElement("div");
     div.classList.add("squares");
     container.appendChild(div);
-    const squares = document.querySelectorAll(".squares");
-    
-    squares.forEach(square => {
-      square.addEventListener("mouseover", event => {
-        event.target.style.background = "red";
-      });
-    })
   }
+  paint()
 } 
 
 const changeSize = size => {
@@ -35,9 +29,20 @@ const changeSize = size => {
 }
 
 clearButton.addEventListener("click", () => {
+  const squares = document.querySelectorAll(".squares");
   squares.forEach(square => {
     square.style.background = "white";
   });
 })
+
+const paint = (color) => {
+  const squares = document.querySelectorAll(".squares");
+  
+  squares.forEach(square => {
+    square.addEventListener("mouseover", event => {
+      event.target.style.background = `${color}`;
+    });
+  })
+}
 
 createSquares(16);

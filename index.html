@@ -10,14 +10,25 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="everything">
+  <nput class="everything">
     <h1 class="title">SKETCHPAD</h1>
     <div id="container"></div>
     <div id="new-container"></div>
     <button id="clear-btn">Clear</button>
     <input type="text" placeholder="Number of squares" value="16" onchange="changeSize(this.value)">
     <button id="new-canvas-btn">New Canvas</button>
-  </input>
-</div>
+    <div class="color-div">
+      <input type="radio" name="color" id="color-input" placeholder="black" value="black" onchange="paint(this.value)" checked>
+      <label for="color-input">black</label>
+      <input type="radio" name="color" id="color-input" placeholder="red" value="red" onchange="paint(this.value)">
+      <label for="color-input">red</label>
+      <input type="radio" name="color" id="color-input" placeholder="blue" value="blue" onchange="paint(this.value)">
+      <label for="color-input">blue</label>
+      <input type="radio" name="color" id="color-input" placeholder="green" value="green" onchange="paint(this.value)">
+      <label for="color-input">green</label>
+      <input type="radio" name="color" id="color-input" placeholder="yellow" value="yellow" onchange="paint(this.value)">
+      <label for="color-input">yellow</label>
+    </div>
+  </div>
 </body>
 </html>
