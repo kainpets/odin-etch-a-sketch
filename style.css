@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 15px;
+  gap: 15px;
 }
 
 #container {
